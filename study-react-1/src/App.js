@@ -5,6 +5,7 @@ import { Button } from "antd";
 import HocPage from "./pages/HocPage";
 import FormPage from "./pages/FormPage";
 import FormPage2 from "./pages/FormPage2";
+import MyFormPage from "./pages/MyFormPage";
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,10 @@ function App() {
       {/* <FormPage /> */}
 
       {/* 表单组件, 使用create */}
-      <FormPage2 />
+      {/* <FormPage2 /> */}
+
+      {/* 自己实现一个create */}
+      <MyFormPage />
     </div>
   );
 }
