@@ -7,6 +7,7 @@ import FormPage from "./pages/FormPage";
 import FormPage2 from "./pages/FormPage2";
 import MyFormPage from "./pages/MyFormPage";
 import DialogPage from "./pages/DialogPage";
+import ContextPage from "./pages/ContextPage";
 function App() {
   return (
     <div className="App">
@@ -23,10 +24,13 @@ function App() {
       {/* <FormPage2 /> */}
 
       {/* 自己实现一个create */}
-      <MyFormPage />
+      {/* <MyFormPage /> */}
 
       {/* 弹窗组件 */}
       {/* <DialogPage></DialogPage> */}
+
+      {/* 上下文 */}
+      <ContextPage />
     </div>
   );
 }
