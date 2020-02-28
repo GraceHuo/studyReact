@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Button from "antd/es/button";
 // import "antd/dist/antd.css";
 import { Button } from "antd";
@@ -10,7 +10,10 @@ import DialogPage from "./pages/DialogPage";
 import ContextPage from "./pages/ContextPage";
 import ReduxPage from "./pages/ReduxPage";
 import CalculatorPage from "./pages/CalculatorPage";
+import ReactReduxPage from "./pages/ReactReduxPage";
+
 function App() {
+  const [num, setNum] = useState(0);
   return (
     <div className="App">
       {/* Test antd */}
@@ -35,10 +38,14 @@ function App() {
       {/* <ContextPage /> */}
 
       {/* Redux */}
-      <ReduxPage />
+      {/* <ReduxPage /> */}
 
       {/* Calculator */}
       {/* <CalculatorPage /> */}
+
+      {/* ReactRedux */}
+      <button onClick={() => setNum(num + 1)}>Change Number {num}</button>
+      {<ReactReduxPage msg={num} />}
     </div>
   );
 }
