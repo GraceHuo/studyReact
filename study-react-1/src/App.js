@@ -8,6 +8,8 @@ import FormPage2 from "./pages/FormPage2";
 import MyFormPage from "./pages/MyFormPage";
 import DialogPage from "./pages/DialogPage";
 import ContextPage from "./pages/ContextPage";
+import ReduxPage from "./pages/ReduxPage";
+import CalculatorPage from "./pages/CalculatorPage";
 function App() {
   return (
     <div className="App">
@@ -30,7 +32,13 @@ function App() {
       {/* <DialogPage></DialogPage> */}
 
       {/* 上下文 */}
-      <ContextPage />
+      {/* <ContextPage /> */}
+
+      {/* Redux */}
+      <ReduxPage />
+
+      {/* Calculator */}
+      {/* <CalculatorPage /> */}
     </div>
   );
 }

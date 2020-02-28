@@ -44,26 +44,29 @@ export default function KFormCreate(Cmp) {
       };
     };
 
-    validate = state => {
+    validate = (state, afterSetState) => {
       // 检验错误信息
       const errors = {};
       for (let name in this.options) {
+        console.log("111", state[name]);
+
         if (state[name] === undefined) {
           // 没有输入，判断为不合法
           errors[name] = this.options[name].rules[0].message;
         }
       }
-      this.setState({ ...state, errors });
+      this.setState({ ...state, errors }, afterSetState);
     };
     validateFields = callback => {
       const state = { ...this.state };
-      this.validate(state);
+      this.validate(state, () => {
+        if (JSON.stringify(errors) === "{}") {
+          callback(undefined, state);
+        } else {
+          callback(errors, state);
+        }
+      });
       const { errors } = state;
-      if (JSON.stringify(errors) === "{}") {
-        callback(undefined, state);
-      } else {
-        callback(errors, state);
-      }
     };
     render() {
       return (
