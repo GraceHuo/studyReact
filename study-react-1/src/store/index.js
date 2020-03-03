@@ -4,6 +4,8 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 // import logger from "redux-logger";
 
 function countReducer(state = 0, action) {
+  console.log("action", action);
+
   action.payload = action.payload || 1;
   switch (action.type) {
     case "ADD":

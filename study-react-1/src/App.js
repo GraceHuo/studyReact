@@ -45,7 +45,7 @@ function App() {
 
       {/* ReactRedux */}
       <button onClick={() => setNum(num + 1)}>Change Number {num}</button>
-      {<ReactReduxPage msg={num} />}
+      {<ReactReduxPage num={num} />}
     </div>
   );
 }
