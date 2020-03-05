@@ -11,6 +11,7 @@ import ContextPage from "./pages/ContextPage";
 import ReduxPage from "./pages/ReduxPage";
 import CalculatorPage from "./pages/CalculatorPage";
 import ReactReduxPage from "./pages/ReactReduxPage";
+import RouterPage from "./pages/RouterPage";
 
 function App() {
   const [num, setNum] = useState(0);
@@ -44,8 +45,11 @@ function App() {
       {/* <CalculatorPage /> */}
 
       {/* ReactRedux */}
-      <button onClick={() => setNum(num + 1)}>Change Number {num}</button>
-      {<ReactReduxPage num={num} />}
+      {/* <button onClick={() => setNum(num + 1)}>Change Number {num}</button>
+      {<ReactReduxPage num={num} />} */}
+
+      {/* Router */}
+      <RouterPage />
     </div>
   );
 }
