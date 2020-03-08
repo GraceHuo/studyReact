@@ -10,26 +10,26 @@ export default class RouterPage extends Component {
     return (
       <div>
         <h3>RouterPage</h3>
-        <Router>
+        {/* <Router>
           <Link to="/home">Home Page</Link>
           <Link to="/user">User Page</Link>
 
           <Route path="/home" component={HomePage} />
           <Route path="/user" component={UserPage} />
-        </Router>
-        {/* <Router>
+        </Router> */}
+        <Router>
           <Link to="/">Home Page</Link>
           <Link to="/user">User Page</Link>
           <Link to="/login">Login Page</Link>
           <Link to="/search/123">Search</Link>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <PrivateRoute path="/user" component={UserPage} />
+            {/* <PrivateRoute path="/user" component={UserPage} /> */}
             <Route path="/login" component={LoginPage} />
             <Route path="/search/:id" component={SearchComponent} />
             <Route render={() => <div>404</div>} />
           </Switch>
-        </Router> */}
+        </Router>
       </div>
     );
   }
